@@ -26,3 +26,4 @@
   # Non - Graphical 
   ![alt text](https://github.com/joluoch/BoredPandaAssignment/blob/master/OutputImages/nongraphical.png?raw=true)
   # Graphical 
+   ![alt text](https://github.com/joluoch/BoredPandaAssignment/blob/master/OutputImages/graphicaloutput.png?raw=true)
