@@ -47,14 +47,24 @@ def lastmonth_popular_subcategory(dbName:str,start_date:str,last_date : str):
     #res = cur.execute(sqlquery)
     data = pd.read_sql(sqlquery,conn)
     print(data)
+
    
 
     conn.commit()
     cur.close()
 
-    return 
+    return data
 
+def plot_bar(df: pd.DataFrame, x_col: str, y_col: str, title: str, xlabel: str, ylabel: str) -> None:
+    plt.figure(figsize=(12, 8))
+    sns.barplot(data=df, x=x_col, y=y_col)
+    plt.title(title, size=20)
+    plt.xticks(rotation=75, fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.xlabel(xlabel, fontsize=16)
+    plt.ylabel(ylabel, fontsize=16)
+    plt.show()
 
 if __name__ == "__main__":
-    lastmonth_popular_subcategory(dbName='pandavideo',start_date='2022-5-1',last_date='2022-5-31')
-    
+    data = lastmonth_popular_subcategory(dbName='pandavideo',start_date='2022-1-1',last_date='2022-1-31')
+    plot_bar(data, 'subcategory_name','popular','plot showing last months popular subcategory','subcategory','poplarity count')
