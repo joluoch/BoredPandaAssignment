@@ -2,6 +2,11 @@
 # Technical question : 
   Design a DB structure to store video data. We need video titles, category names, and subcategory names. 
   Write a query for this structure to fetch last month's most popular subcategories in which it would show the name of the subcategory and how many times it appeared.
+ 
+# Setup :
+  1. Clone repo: git clone https://github.com/joluoch/BoredPandaAssignment.git
+  2. run makeDb.py in terminal : python MakeDb.py
+  3. in popular subcategory insert the dates required the run : python PopularSubcategory.py
 # Simple Schema :
   ![alt text](https://github.com/joluoch/BoredPandaAssignment/blob/master/OutputImages/schema.png?raw=true)
   
@@ -18,7 +23,7 @@
     This table contains the id's of video and subcategory as foreign keys. 
     Logic: one video can have many subcategories and one subcategory can have many videos. thus if you want 
             to query the category table you will have to go through the subcategory table
-# schema foloder:
+# schema folder:
   schema.sql - it contains the sql to create the database tables
   
   Insertstatement.sql - contains insert sql statements 
