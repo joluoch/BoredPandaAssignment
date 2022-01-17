@@ -3,7 +3,7 @@
   Design a DB structure to store video data. We need video titles, category names, and subcategory names. 
   Write a query for this structure to fetch last month's most popular subcategories in which it would show the name of the subcategory and how many times it appeared.
 # Simple Schema :
-  
+  ![alt text](https://github.com/joluoch/[reponame]/OutputImages/schema.png?raw=true)
   The Schema has 4 tables, 
   ## video tables:
     The table contains the video id , video url, video duration and published date. 
