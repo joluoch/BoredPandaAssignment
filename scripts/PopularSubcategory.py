@@ -42,9 +42,8 @@ def lastmonth_popular_subcategory(dbName:str,start_date:str,last_date : str):
     """
     conn, cur = DBConnect(dbName)
 
-    sqlquery = ("SELECT sc.subcategory_name , COUNT(vc.idsubcat) AS popular FROM vidcat AS vc INNER JOIN subcategory AS sc ON sc.idsubcat = vc.idsubcat WHERE vc.idvideo IN (SELECT idvideo FROM video WHERE publish_date BETWEEN '2022-1-1' AND '2022-1-30') GROUP BY sc.subcategory_name ORDER BY popular DESC")
 
-
+    sqlquery = f"SELECT sc.subcategory_name , COUNT(vc.idsubcat) AS popular FROM vidcat AS vc INNER JOIN subcategory AS sc ON sc.idsubcat = vc.idsubcat WHERE vc.idvideo IN (SELECT idvideo FROM video WHERE publish_date BETWEEN '{start_date}' AND '{last_date}') GROUP BY sc.subcategory_name ORDER BY popular DESC"
     #res = cur.execute(sqlquery)
     data = pd.read_sql(sqlquery,conn)
     print(data)
@@ -57,5 +56,5 @@ def lastmonth_popular_subcategory(dbName:str,start_date:str,last_date : str):
 
 
 if __name__ == "__main__":
-    lastmonth_popular_subcategory(dbName='pandavideo',start_date='2022-4-1',last_date='2022-4-31')
+    lastmonth_popular_subcategory(dbName='pandavideo',start_date='2022-5-1',last_date='2022-5-31')
     
