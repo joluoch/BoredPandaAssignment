@@ -18,8 +18,14 @@
     This table contains the id's of video and subcategory as foreign keys. 
     Logic: one video can have many subcategories and one subcategory can have many videos. thus if you want 
             to query the category table you will have to go through the subcategory table
-# Scripts:
-  MakeDb.py - cnotains queries to make the database and insert data into it \n
+# schema foloder:
+  schema.sql - it contains the sql to create the database tables
+  
+  Insertstatement.sql - contains insert sql statements 
+# Scripts folder:
+
+  MakeDb.py - cnotains queries to make the database and insert data into it.
+  
   PopularSubcategory.py - contains scripts to show the popular sub category of between given date.
 # Outputs :
   We have queried the database to show most popular subcategory in the month of january below are the outputs.
