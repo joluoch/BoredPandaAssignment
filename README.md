@@ -24,5 +24,5 @@
 # Outputs :
   We have queried the database to show most popular subcategory in the month of january below are the outputs.
   # Non - Graphical 
-  
+  ![alt text](https://github.com/joluoch/BoredPandaAssignment/blob/master/OutputImages/nongraphical.png?raw=true)
   # Graphical 
